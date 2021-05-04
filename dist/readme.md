@@ -1,36 +1,39 @@
+# Allan
 
-  # Allan
+## Description
 
-  ## Description
-  Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.
+Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.
 
-  ## Table of Contents
+## Table of Contents
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License]](#license)
-  * [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
 
-  ## Installation
-  npm install
+## Installation
 
-  ## Usage
-  personal readme file creator
+npm install
 
-  ## License
+## Usage
 
-  MIT Lincense
+personal readme file creator
 
-  ## Contributing
+## License
+
+MIT Lincense
+
+## Contributing
+
     * allanp94,steve-0,nickolas
 
-  ## Tests
-  all the tests were made
+## Tests
 
-  ## Questions
+all the tests were made
 
-  Github Name: allanp94
-  (https://www.github.com/allanp94)
+## Questions
 
-  Email: allan.p94@gmail.com
+Github Name: allanp94
+(https://www.github.com/allanp94)
 
+Email: allan.p94@gmail.com
