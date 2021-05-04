@@ -1,16 +1,40 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+  "What is the name of the project (Required)?: ",
+  "Enter a description for the project: ",
+  "Enter instalation instructions for the project: ",
+  "Enter usage information for the project: ",
+  "Enter contributing guidelines for the project: ",
+  "Enter test instructions for the project: ",
+  "Enter your GitHub username: ",
+  "Enter your email address: ",
+  "Choose a license for your project",
+];
+
+const mockData = {
+  name: "Allan",
+  description:
+    "Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.",
+  instalation: "npm install",
+  usage: "personal readme file creator",
+  contributing: "allanp94 steve-0 nickolas",
+  tests: "all the tests were made",
+  license: "MIT Lincense",
+  github: "allanp94",
+  email: "allan.p94@gmail.com",
+};
 
 const promptUser = () => {
   return inquirer.prompt([
     {
       type: "input",
       name: "name",
-      message: "What is the name of the project (Required)?: ",
+      message: questions[0],
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -22,8 +46,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Description",
-      message: "Enter a description for the project: ",
+      name: "description",
+      message: questions[1],
       validate: (input) => {
         if (input) {
           return true;
@@ -35,8 +59,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Instalation",
-      message: "Enter instalation instructions for the project: ",
+      name: "instalation",
+      message: questions[2],
       validate: (input) => {
         if (input) {
           return true;
@@ -48,8 +72,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Usage",
-      message: "Enter usage information for the project: ",
+      name: "usage",
+      message: questions[3],
       validate: (input) => {
         if (input) {
           return true;
@@ -61,8 +85,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Contributing",
-      message: "Enter contributing guidelines for the project: ",
+      name: "contributing",
+      message: questions[4],
       validate: (input) => {
         if (input) {
           return true;
@@ -74,8 +98,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Tests",
-      message: "Enter test instructions for the project: ",
+      name: "tests",
+      message: questions[5],
       validate: (input) => {
         if (input) {
           return true;
@@ -87,8 +111,8 @@ const promptUser = () => {
     },
     {
       type: "checkbox",
-      name: "License",
-      message: "Enter test instructions for the project: ",
+      name: "license",
+      message: questions[8],
       choices: [
         "GNU AGPLv3",
         "GNU GPLv3",
@@ -102,8 +126,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "GitHub",
-      message: "Enter your GitHub username: ",
+      name: "gitHub",
+      message: questions[6],
       validate: (input) => {
         if (input) {
           return true;
@@ -115,8 +139,8 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Email",
-      message: "Enter your email address: ",
+      name: "email",
+      message: questions[7],
       validate: (input) => {
         if (input) {
           return true;
@@ -130,14 +154,36 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(fileName, data, (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: "File created",
+      });
+    });
+  });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  promptUser()
+    .then((readmeData) => {
+      console.log(readmeData);
+      return generateMarkdown(mockData);
+    })
+    .then((data) => {
+      return writeToFile("./dist/readme.md", data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 // Function call to initialize app
-init(
-  promptUser().then((readmeData) => {
-    console.log(readmeData);
-  })
-);
+init();
