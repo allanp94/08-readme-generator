@@ -4,18 +4,18 @@ const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 const inquirerUserPrompt = require("./utils/userPrompts");
 
-const mockData = {
-  title: "Allan",
-  description:
-    "Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.",
-  instalation: "npm install",
-  usage: "personal readme file creator",
-  contributing: "allanp94 steve-0 nickolas",
-  tests: "all the tests were made",
-  license: ["GNUGPLv3", "Apache-2.0", "MIT"],
-  github: "allanp94",
-  email: "allan.p94@gmail.com",
-};
+// const mockData = {
+//   title: "Allan",
+//   description:
+//     "Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.",
+//   instalation: "npm install",
+//   usage: "personal readme file creator",
+//   contributing: "allanp94 steve-0 nickolas",
+//   tests: "all the tests were made",
+//   license: ["GNUGPLv3", "Apache-2.0", "MIT"],
+//   github: "allanp94",
+//   email: "allan.p94@gmail.com",
+// };
 
 const promptUser = () => {
   return inquirer.prompt(inquirerUserPrompt);

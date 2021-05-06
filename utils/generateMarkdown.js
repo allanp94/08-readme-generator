@@ -46,9 +46,6 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // let contributing = data.contributing;
-  // contributing = contributing.join(", ");
-
   return `
   # ${data.title}
 
@@ -101,8 +98,8 @@ ${data.tests}
 
 ## Questions
 
-Github Name: ${data.github}
-(https://www.github.com/${data.github})
+Github Name: ${data.gitHub}
+(https://www.github.com/${data.gitHub})
 
 Please contact me with any questions/opportunities at my email listed below. 
 Email: ${data.email}
