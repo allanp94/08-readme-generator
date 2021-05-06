@@ -1,39 +1,60 @@
-# Allan
 
-## Description
+  # 08-readme-generator
 
-Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et.
+  ![GitHub](https://img.shields.io/github/license/allanp94/08-readme-generator?color=green&label=Apache-2.0) ![GitHub](https://img.shields.io/github/license/allanp94/08-readme-generator?color=green&label=MIT)
 
-## Table of Contents
+  ## Description
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Questions](#questions)
+  this project allows the user to create fast and professional readme file
 
-## Installation
+  ---
 
-npm install
+  ## Table of Contents
 
-## Usage
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Questions](#questions)
+  
+  ---
 
-personal readme file creator
+  ## Installation
 
-## License
+  clone the repository, make sure you have node.js install and run node index.js in the command line
 
-MIT Lincense
+  ---
+
+  ## Usage
+
+  creating a fast readme file for projects
+
+  ---
+
+  ## License
+
+  
+* [Apache-2.0](https://choosealicense.com/licenses/apache-2.0/),
+* [MIT](https://choosealicense.com/licenses/mit/)
+
+--- 
 
 ## Contributing
 
-    * allanp94,steve-0,nickolas
+  * allanp94 
+
+---
 
 ## Tests
 
-all the tests were made
+no test instructions available at this time
+
+---
 
 ## Questions
 
-Github Name: allanp94
-(https://www.github.com/allanp94)
+Github Name: undefined
+(https://www.github.com/undefined)
 
+Please contact me with any questions/opportunities at my email listed below. 
 Email: allan.p94@gmail.com
+
